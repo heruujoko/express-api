@@ -22,4 +22,7 @@ module.exports = (app) => {
             payload: req.jwtpayload
         })
     })
+    app.post('/',(req,res) => {
+        res.json(req.body)
+    })
 }
