@@ -12,6 +12,7 @@ app.use(bodyParser.json())
 
 app.jwt = jwt
 app.middlewares = require('./middlewares')(app,fs)
+app.controllers = require('./controllers')(app,fs)
 
 const routes = require('./routes')(app)
 
