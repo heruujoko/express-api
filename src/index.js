@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 
 let app = express()
 http.createServer(app)
+app.models = require('./models')(app);
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
