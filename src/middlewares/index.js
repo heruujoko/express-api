@@ -5,7 +5,7 @@ module.exports = (app,fs) => {
         // ignore index.js and . files
         if(module_files[i] != 'index.js'){
             let module_name = module_files[i].split('.')[0];
-            let module_file = require(__dirname+'/'+module_files[i])(app)
+            let module_file = new (require(__dirname+'/'+module_files[i]))(app)
             modules[module_name] = module_file
         }
     }

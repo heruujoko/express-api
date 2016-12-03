@@ -12,7 +12,7 @@ module.exports = (app) => {
             token: token
         })
     })
-    app.get('/verify',app.middlewares.JWTMiddleware,(req,res) => {
+    app.get('/verify',app.middlewares.JWTMiddleware.index,(req,res) => {
         res.json({
             status: "success",
             payload: req.jwtpayload
