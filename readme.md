@@ -2,7 +2,7 @@ this is what I do in my free time. Heavily inspired By [Septiyan Andika express-
 
 ## INSTALLATION
 
-`npm install`
+`npm install` then
 `npm run dev`
 
 you may need sequelize cli in order to user the migration
