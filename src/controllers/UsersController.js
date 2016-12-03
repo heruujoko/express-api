@@ -1,11 +1,16 @@
-module.exports = (app) => {
-    let ctrl = {}
-    ctrl.index = function(req,res) {
-        app.models.User.findAll()
+class UsersController {
+
+    constructor(app){
+        UsersController.app = app;
+    }
+
+    index(req,res){
+        UsersController.app.models.User.findAll()
         .then((users) =>{
             res.json(users);
         })
     }
 
-    return ctrl
 }
+
+module.exports = UsersController

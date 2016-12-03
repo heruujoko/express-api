@@ -4,7 +4,7 @@
 
 module.exports = (app) => {
     app.get('/',app.controllers.SpecController.index);
-    app.get('/users',app.controllers.UsersController.index);
+    app.get('/users',app.middlewares.JWTMiddleware.index,app.controllers.UsersController.index);
     app.get('/token',(req,res) => {
         let token = app.jwt.sign({ name: "Heru" },'f9ICFKBHBmlN3Vs4MF27')
         res.json({
