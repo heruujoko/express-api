@@ -2,7 +2,7 @@
   "name": "api-es6",
   "version": "0.0.1",
   "description": "My API practice",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon -w src --exec ./node_modules/.bin/babel-node src --presets es2015,stage-0",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,11 @@
   "author": "heruujoko",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
+    "connect-multiparty": "^2.0.0",
     "express": "^4.14.0",
+    "express-joi": "^0.3.1",
     "jsonwebtoken": "^7.1.9",
     "morgan": "^1.7.0",
     "mysql": "^2.12.0",

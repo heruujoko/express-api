@@ -5,8 +5,8 @@ module.exports = function(sequelize, DataTypes) {
         name: DataTypes.STRING,
         password: DataTypes.STRING,
         email: DataTypes.STRING,
-        created_at: DataTypes.DATE,
-        updated_at: DataTypes.DATE
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE
     },{
         timestamps: false,
         tableName: "users"
